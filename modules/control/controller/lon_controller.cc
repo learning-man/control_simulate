@@ -224,7 +224,7 @@ Status LonController::ComputeControlCommand(
   }
 
   double speed_offset =
-      station_pid_controller_.Control((speed_controller_input_limited), ts);
+      station_pid_controller_.Control(speed_controller_input_limited, ts);
   if (enable_leadlag) {
     speed_offset = station_leadlag_controller_.Control(speed_offset, ts);
   }
